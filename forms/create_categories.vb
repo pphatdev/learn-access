@@ -32,8 +32,8 @@ Sub SaveCategory()
     rs.AddNew
     rs!name = categoryName
     rs!descriptions = descriptions
-    rs!create_date = createDate
-    rs!create_by = createBy
+    rs!created_date = createDate
+    rs!created_by = createBy
     rs!status = status
     rs!is_deleted = False ' Default value for new records
     rs.Update
@@ -46,8 +46,6 @@ Sub SaveCategory()
     ' Clear the form controls
     Me.txtName.Value = ""
     Me.txtDescriptions.Value = ""
-    Me.txtCreateBy.Value = ""
-    Me.chkStatus.Value = False
     
     ' Display a success message
     MsgBox "Category saved successfully.", vbInformation
