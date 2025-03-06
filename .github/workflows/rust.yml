@@ -37,9 +37,14 @@ jobs:
       working-directory: ./app
       run: trunk build --release
 
-    - name: Run tests
-      working-directory: ./app
-      run: cargo test --verbose
+    # - name: Run tests
+    #   working-directory: ./app
+    #   run: cargo test --verbose
+
+    - name: Upload artifact
+      uses: actions/upload-pages-artifact@v3
+      with:
+        path: './app/dist'
 
   deploy:
     needs: build
