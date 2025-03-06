@@ -31,5 +31,5 @@ ehthumbs_vista.db
 $RECYCLE.BIN/
 
 
-/dist/
-/target/
+/app/dist/
+/app/target/
